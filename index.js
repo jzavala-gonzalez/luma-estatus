@@ -37,7 +37,7 @@ await page.setViewport({
 
 // Guardar fecha de ahora
 const now = dayjs();
-const filename_datetime = now.format(filename_datetime_format);
+const filename_datetime = now.tz(tz).format(filename_datetime_format);
 console.log('now (ISO):', now.toISOString(), '(debe ser UTC)');
 console.log('filename_datetime:', filename_datetime, '(debe ser Puerto Rico)');
 
