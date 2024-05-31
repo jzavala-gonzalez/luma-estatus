@@ -15,7 +15,7 @@ const page = await browser.newPage();
 await page.setViewport({
     width: 768,
     height: 680,
-    deviceScaleFactor: 3,
+    deviceScaleFactor: 2,
 });
 
 // Abrir una URL
