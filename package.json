@@ -6,9 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "dayjs": "^1.11.11",
     "puppeteer": "^22.10.0"
   }
 }
