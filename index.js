@@ -59,7 +59,9 @@ while (!success) {
     await page.goto(website_url, { waitUntil: 'networkidle0' });
 
     // Esperar por la tabla
-    await page.waitForSelector('div.jss84', { visible: true })
+    // const table_selector = 'div.jss84';
+    const table_selector = 'xpath///h1[text()="Estatus del Servicio"]/following-sibling::div[1]';
+    await page.waitForSelector(table_selector, { visible: true })
     .then(() => {
         console.log('Tabla encontrada');
         success = true;
@@ -67,6 +69,12 @@ while (!success) {
     .catch((err) => {
         console.log('Error:', err);
     });
+
+    // if (!success) {
+    //     // Print el html de la pagina
+    //     const html = await page.content();
+    //     console.log('html:', html);
+    // }
 }
 
 if (!success) {
