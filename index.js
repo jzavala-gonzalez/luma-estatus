@@ -59,7 +59,7 @@ while (!success) {
     await page.goto(website_url, { waitUntil: 'networkidle0' });
 
     // Esperar por la tabla
-    await page.waitForSelector('div.jss55', { visible: true })
+    await page.waitForSelector('div.jss84', { visible: true })
     .then(() => {
         console.log('Tabla encontrada');
         success = true;
